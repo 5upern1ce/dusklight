@@ -53,6 +53,90 @@ static constexpr auto ACHIEVEMENTS_FILENAME = "achievements.json";
 
 std::vector<AchievementSystem::Entry> AchievementSystem::makeEntries() {
     return {
+        // Progression
+        {
+            {
+                "hero_of_the_village",
+                "Hero of the Village",
+                "Complete the introduction in Ordon Village.",
+                AchievementCategory::Progression, 
+                false, 0, 0, false},
+            [](Achievement& a, json&) {
+                if (dComIfGs_isEventBit(dSv_event_flag_c::M_008)) {
+                    a.progress = 1;
+                }
+            },
+            {}
+        },
+        {
+            {
+                "the_twilit_castle", 
+                "The Twilit Castle",
+                "Meet the Princess of the Twilit Kingdom.", 
+                AchievementCategory::Progression, 
+                false, 0, 0, false},
+            [](Achievement& a, json&) {
+                if (dComIfGs_isEventBit(dSv_event_flag_c::M_012)) {
+                    a.progress = 1;
+                }
+            },
+            {}
+        },
+        {
+            {
+                "the_chosen_hero",
+                "The Chosen Hero",
+                "Return to a human and discover your true power.",
+                 AchievementCategory::Progression,
+                 false, 0, 0, false},
+            [](Achievement& a, json&) {
+                if (dComIfGs_isEventBit(dSv_event_flag_c::M_019)) {
+                    a.progress = 1;
+                }
+            },
+            {}
+        },
+        {
+            {
+                "meet-the-heros-shade", 
+                "A Sword Has No Strength...", 
+                "Meet with the Hero's Shade.",
+                 AchievementCategory::Progression,
+                 false, 0, 0, false},
+            [](Achievement& a, json&) {
+                if (dComIfGs_isEventBit(dSv_event_flag_c::F_0339)) {
+                    a.progress = 1;
+                }
+            },
+            {}
+        },
+        {
+            {
+                "meet-the-heros-shade",
+                "A Sword Has No Strength...",
+                "Meet with the Hero's Shade.",
+                 AchievementCategory::Progression,
+                 false, 0, 0, false},
+            [](Achievement& a, json&) {
+                if (dComIfGs_isEventBit(dSv_event_flag_c::F_0339)) {
+                    a.progress = 1;
+                }
+            },
+            {}
+        },
+        {
+            {
+                "meet-the-heros-shade",
+                "A Sword Has No Strength...",
+                "Meet with the Hero's Shade.",
+                 AchievementCategory::Progression,
+                 false, 0, 0, false},
+            [](Achievement& a, json&) {
+                if (dComIfGs_isEventBit(dSv_event_flag_c::F_0339)) {
+                    a.progress = 1;
+                }
+            },
+            {}},
         // Challenge
         {
             {
@@ -357,7 +441,7 @@ std::vector<AchievementSystem::Entry> AchievementSystem::makeEntries() {
         {
             {
                 "all_hidden_skills",
-                "Master of Secrets",
+                "...Unless the Hand that Holds it has Courage",
                 "Learn all 7 Hidden Skills.",
                 AchievementCategory::Collection,
                 true, 7, 0, false

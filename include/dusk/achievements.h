@@ -12,6 +12,7 @@
 namespace dusk {
 
 enum class AchievementCategory : uint8_t {
+    Progression,
     Challenge,
     Collection,
     Minigame,

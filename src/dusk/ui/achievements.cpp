@@ -16,6 +16,7 @@ struct CategoryInfo {
 };
 
 constexpr CategoryInfo kCategories[] = {
+    {AchievementCategory::Progression, "Progression"},
     {AchievementCategory::Challenge,  "Challenge"},
     {AchievementCategory::Collection, "Collection"},
     {AchievementCategory::Minigame,   "Minigame"},
