@@ -933,9 +933,9 @@ std::vector<AchievementSystem::Entry> AchievementSystem::makeEntries() {
         },
         {
             {
-                 "sword_and_shield_skip", "Sword and Shield Skip",
-                 "Pass through the Twilight Wall in Ordon Spring before obtaining both the Ordon Sword "
-                 "and Shield.",
+                 "sword_and_shield_skip",
+                 "Hugo Hopping",
+                 "Pass through the Twilight Wall in Ordon Spring before obtaining both the Ordon Sword and Shield with the help of Hugo.",
                  AchievementCategory::Glitched, false, 0, 0, false
             },
             [](Achievement& a, json&) {
